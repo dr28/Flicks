@@ -54,21 +54,9 @@ class MovieViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: UIControlEvents.valueChanged)
         
-        //self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: "Flix"), for: .default)
-        //self.navigationController?.navigationBar.layer.borderWidth = 1
-        //self.navigationController?.navigationBar.layer.borderColor = UIColor.white.cgColor
-        
-        let logo = UIImage(named: "Flix")
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 375, height: 20))
-        imageView.image = logo
-        //let imageView = UIImageView(image:logo)
-        imageView.contentMode = .scaleAspectFit//
-
-       // self.navigationItem.titleView = imageView
-        
         
         if let navigationBar = navigationController?.navigationBar {
-            navigationBar.setBackgroundImage(UIImage(named: "Flix"), for: .default)
+            navigationBar.setBackgroundImage(UIImage(named: "Flicks"), for: .default)
             navigationBar.tintColor = UIColor(red: 1.0, green: 0.25, blue: 0.25, alpha: 0.8)
             //navigationBar.layer.borderWidth = 1
             //navigationBar.layer.borderColor = UIColor.white.cgColor
