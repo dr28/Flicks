@@ -74,7 +74,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="2Lk-SL-hdU">
                                         <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="mf1-f4-2w5">
-                                            <rect key="frame" x="16" y="7" width="343" height="30"/>
+                                            <rect key="frame" x="16" y="7.5" width="343" height="29"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" red="1" green="0.76078166729999996" blue="0.24551246290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <segments>

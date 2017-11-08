@@ -13,37 +13,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        
         window = UIWindow(frame: UIScreen.main.bounds)
         
         ThemeManager.applyTheme()
         
-        
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let nowPlayingNavigationController : UINavigationController = storyboard.instantiateViewController(withIdentifier: "MovieList") as! UINavigationController
+        let nowPlayingNavigationController = storyboard.instantiateViewController(withIdentifier: "MovieList") as! UINavigationController
         
         let nowPlayingViewControler = nowPlayingNavigationController
 
         nowPlayingViewControler.tabBarItem.title = "Now Playing"
-        let playingImageFromFile :UIImage = UIImage.init(named: "NowPlaying")!
-        let playingView = UIImageView.init(image: playingImageFromFile.withRenderingMode(UIImageRenderingMode.alwaysTemplate))
+        let playingImageFromFile = UIImage(named: "NowPlaying")!
+        let playingView = UIImageView(image: playingImageFromFile.withRenderingMode(UIImageRenderingMode.alwaysTemplate))
 
-        nowPlayingViewControler.tabBarItem.image = playingView.image//(named: "NowPlaying")
+        nowPlayingViewControler.tabBarItem.image = playingView.image
         nowPlayingViewControler.tabBarItem.selectedImage = UIImage(named: "NowPlaying_filled")
 
-
-        let topRatedNavigationController : UINavigationController = storyboard.instantiateViewController(withIdentifier: "MovieList") as! UINavigationController
+        let topRatedNavigationController = storyboard.instantiateViewController(withIdentifier: "MovieList") as! UINavigationController
         let topRatedViewControler = topRatedNavigationController
         
         topRatedViewControler.tabBarItem.title = "Top Rated"
-        let starImageFromFile :UIImage = UIImage.init(named: "Star")!
-        let starView = UIImageView.init(image: starImageFromFile.withRenderingMode(UIImageRenderingMode.alwaysTemplate))
+        let starImageFromFile = UIImage(named: "Star")!
+        let starView = UIImageView(image: starImageFromFile.withRenderingMode(UIImageRenderingMode.alwaysTemplate))
 
-        topRatedViewControler.tabBarItem.image = starView.image//UIImage(named: "Star")
+        topRatedViewControler.tabBarItem.image = starView.image
         topRatedViewControler.tabBarItem.selectedImage = UIImage(named: "Star_filled")
 
         // Set up the Tab Bar Controller to have two tabs

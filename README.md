@@ -39,7 +39,14 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Cleaned up code as per the checklist provided in the project feedback
+
+Followed Ray Wenderlich Swift Coding Style
+Organized source files into Groups
+Minimized public functions and properties
+Set the Content Mode for ImageViews to Aspect Fill and clip subviews
+Avoided naming collisions inside of UITableViewCell. Changed property name titleLabel to nameLabel.
+Created a movie property inside both table and collection custom cells and used property observer to update the cell's subviews.
 
 ## License
 
