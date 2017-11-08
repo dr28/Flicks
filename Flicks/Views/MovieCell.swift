@@ -10,11 +10,21 @@ import UIKit
 
 class MovieCell: UITableViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
-    
     @IBOutlet weak var posterView: UIImageView!
     
+    var movie: Movie? {
+        didSet {
+            nameLabel.text = movie?.movieTitle
+            synopsisLabel.text = movie?.movieOveriew
+            synopsisLabel.sizeToFit()
+            
+            if let path = movie?.moviePosterPath {
+                Constants.getImage(path: path, posterView: posterView)
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

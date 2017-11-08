@@ -12,4 +12,12 @@ class MovieCollectionCell: UICollectionViewCell {
         
     @IBOutlet weak var collectionCellImg: UIImageView!
     
+    var movie: Movie? {
+        didSet {            
+            if let path = movie?.moviePosterPath {
+                Constants.getImage(path: path, posterView: collectionCellImg)
+            }
+        }
+    }
+    
 }

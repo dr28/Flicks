@@ -124,6 +124,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F83A00D71FB2D8C1004B1E48 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8D6DCCA1F6E3D1200AFC01F /* MovieViewController.swift */,
+				F8D6DCD01F6E425500AFC01F /* MovieDetailsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F83A00D81FB2D8E9004B1E48 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8D6DCCE1F6E41DF00AFC01F /* MovieCollectionCell.swift */,
+				F8D6DCCC1F6E410C00AFC01F /* MovieCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F83A00D91FB2D927004B1E48 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8D6DCDD1F6E78B500AFC01F /* Constants.swift */,
+				F8D6DCE11F6F173300AFC01F /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F8D6DC8E1F6E3AC900AFC01F = {
 			isa = PBXGroup;
 			children = (
@@ -149,14 +176,11 @@
 		F8D6DC991F6E3AC900AFC01F /* Flicks */ = {
 			isa = PBXGroup;
 			children = (
-				F8D6DCCA1F6E3D1200AFC01F /* MovieViewController.swift */,
-				F8D6DCE11F6F173300AFC01F /* Movie.swift */,
-				F8D6DCCE1F6E41DF00AFC01F /* MovieCollectionCell.swift */,
-				F8D6DCCC1F6E410C00AFC01F /* MovieCell.swift */,
+				F83A00D91FB2D927004B1E48 /* Models */,
+				F83A00D81FB2D8E9004B1E48 /* Views */,
+				F83A00D71FB2D8C1004B1E48 /* View Controllers */,
 				F8D6DC9A1F6E3AC900AFC01F /* AppDelegate.swift */,
 				F8D6DC9E1F6E3AC900AFC01F /* Main.storyboard */,
-				F8D6DCD01F6E425500AFC01F /* MovieDetailsViewController.swift */,
-				F8D6DCDD1F6E78B500AFC01F /* Constants.swift */,
 				F8D6DCA11F6E3AC900AFC01F /* Assets.xcassets */,
 				F8D6DCDF1F6EF66700AFC01F /* Theme.swift */,
 				F8D6DCA31F6E3AC900AFC01F /* LaunchScreen.storyboard */,
@@ -260,7 +284,7 @@
 				TargetAttributes = {
 					F8D6DC961F6E3AC900AFC01F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = X3E7C93B2H;
+						DevelopmentTeam = Q96MZVJ8BN;
 						ProvisioningStyle = Automatic;
 					};
 					F8D6DCAA1F6E3AC900AFC01F = {
@@ -643,10 +667,10 @@
 			baseConfigurationReference = 2B0C6744248BB9B7B72BB788 /* Pods-Flicks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X3E7C93B2H;
+				DEVELOPMENT_TEAM = Q96MZVJ8BN;
 				INFOPLIST_FILE = Flicks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Flicks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dr.Flicks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -657,10 +681,10 @@
 			baseConfigurationReference = 5917532A37E6B0D2ECCB1029 /* Pods-Flicks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X3E7C93B2H;
+				DEVELOPMENT_TEAM = Q96MZVJ8BN;
 				INFOPLIST_FILE = Flicks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Flicks;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dr.Flicks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

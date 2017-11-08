@@ -22,43 +22,33 @@ class Movie {
     var movieVtAvg: Double!
     var movieReleaseDt: String?
     
-    var movieReleaseDate: String?
-    {
+    var movieReleaseDate: String? {
         get{
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             
             let dateObj = dateFormatter.date(from: movieReleaseDt!)
-            print("Dateobj: \(dateObj!))")
-            
             dateFormatter.dateFormat = "MMMM d, yyyy"
         
             return dateFormatter.string(from: dateObj!)
-
         }
-        set(newValue) {
-            
-            movieReleaseDt = newValue
         
+        set(newValue) {
+            movieReleaseDt = newValue
         }
     }
     
-    var movieVoteAvg: String?
-    {
+    var movieVoteAvg: String? {
         get {
             return String(format: "%.2f", movieVtAvg!).appending("%")
         }
-        
     }
     
     init(data: [String: Any]) {
-
         movieTitle = data[Movie.title] as? String
         movieOveriew = data[Movie.overview] as? String
         moviePosterPath = data[Movie.posterPath] as? String
         movieVtAvg = data[Movie.voteAvg] as? Double ?? 0.0
         movieReleaseDt = data[Movie.releaseDate] as? String
-
     }
-
 }

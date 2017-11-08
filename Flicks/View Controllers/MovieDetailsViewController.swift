@@ -12,24 +12,18 @@ import AFNetworking
 class MovieDetailsViewController: UIViewController {
     
     @IBOutlet weak var movieDetailsScroll: UIScrollView!
-
     @IBOutlet weak var movieDetailsView: UIView!
-
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
-
     @IBOutlet weak var voteAvgLabel: UILabel!
-    
     @IBOutlet weak var voteAvgImg: UIImageView!
     @IBOutlet weak var overviewLabel: UILabel!
-    
-    
     @IBOutlet weak var largePosterImage: UIImageView!
     
     var movie: Movie?
+    private var smallPosterUrl :URL!
+    private var largePosterUrl :URL!
     
-    var smallPosterUrl :URL!
-    var largePosterUrl :URL!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,8 +45,7 @@ class MovieDetailsViewController: UIViewController {
         movieDetailsView.alpha = 0.7
         
         
-        if let path = movie?.moviePosterPath
-        {
+        if let path = movie?.moviePosterPath {
             smallPosterUrl = URL(string: Constants.smallImgBaseUrl + path)
             largePosterUrl = URL(string: Constants.originalImgBaseUrl + path)
             loadLowToHighResImage()
